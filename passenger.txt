@@ -1,0 +1,66 @@
+Jadi langsung saja untuk mulai mendemokan tampilan dari projek ini
+nah di awal terdapat login, namun anggap 
+saja kita belum punya akun,
+dan akan coba register terlebih dahulu
+
+
+setelah berhasil login, kita beralih ke user - lalu passenger
+disini satu akun akan dapat menambahkan beberapa penumpang
+nah, penumpang yang dimaksud akan dapat memesan tiket
+
+langsung kita isikan identitasnya
+save, select item, reset, delete, find, reset (untuk menampilkan kembali data tabel)
+
+
+
+beralih ke kodenya
+dari isian fields di register tadi
+dicek apakah sudah diisi, jika ada yang kosong maka tampil message "..."
+
+jika kondisi terpenuhi, maka akan digenerate objek user dan disave
+pendaftaran akun tadi di database
+
+
+
+lanjut ke loginview, dengan pengecekan apakah field terisi semua apa tidak
+nah jika sudah benar terisi maka akan dipanggil login 
+sesuai email dan password yang dimasukkan untuk menentukan usernya
+
+nah jika user ini ternyata id nya null, maka akan menampilkan "..."
+
+jika sudah benar sesuai email dan password akun yang terdaftar,
+maka akan tampil "selamat datang dengan diikuti nama user akun tersebut"
+dan tampilan akan berganti ke home bandaraview
+
+
+
+pada button SAVE
+terdapat pengecekan isian field kosong atau tidak
+nah jika sudah terisi semua, akan dibuat objek penumpang dan
+data tadi akan diset dan disave
+lalu field akan direset kosong serta tabel akan 
+diload dengan menampilkan data terbaru
+
+
+button RESET sendiri seperti tadi, akan mengosongkan isian di field
+
+
+DELETE
+terdapat kondisi jika niknya kosong dengan kata lain tidak memilih datanya
+maka akan menampilkan error "..."
+nah jika sudah memilih row di tabel yang akan dihapus, maka akan didelete di dbnya sesuai nik
+di penumpang controller
+lalu kosongkan form akan mereset field, dan merefresh table
+
+
+FIND
+ada kondisi jika keywordnya kosong maka tampil "..."
+nah, jika sudah ada keyword yang diisi maka dipanggil method cari
+di dalam method ini terdapat pencarian data penumpang ke database sesuai keyword 
+dengan memanggil cari dari penumpang controller lalu
+akan menampilkan table dengan data sesuai keyword yang dicari
+
+tblpenumpang
+saat di select row nya, di nik akan tidak dapat diedit
+lalu data lain di penumpang akan ditampilkan sesuai data yang terpilih di row tersebut.
+
